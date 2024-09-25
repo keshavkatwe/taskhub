@@ -48,6 +48,7 @@ const config: Config = {
       "gray-700": "var(--gray-700)",
       "gray-800": "var(--gray-800)",
       "gray-900": "var(--gray-900)",
+      "blue-500": "var(--blue-500)",
     },
     borderRadius: {
       "br-20": "20px",

@@ -24,6 +24,7 @@
   --gray-700: #2F4644;
   --gray-800: #202E2D;
   --gray-900: #101717;
+  --blue-500: #0037FF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +50,7 @@
     --gray-700: #2F4644;
     --gray-800: #202E2D;
     --gray-900: #101717;
+    --blue-500: #0037FF;
   }
 }
 
@@ -56,6 +58,10 @@ body {
   color: var(--text-black);
   background: var(--background-grey);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+  color: var(--blue-500);
 }
 
 @layer utilities {
