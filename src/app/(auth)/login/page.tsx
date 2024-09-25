@@ -1,4 +1,10 @@
+import { OnboardingContainer } from "@/components";
+
 const LoginPage = () => {
-  return <h1>Login</h1>;
+  return (
+    <OnboardingContainer>
+      <div className={"h-72"}>Login</div>
+    </OnboardingContainer>
+  );
 };
 export default LoginPage;

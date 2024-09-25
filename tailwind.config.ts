@@ -39,6 +39,9 @@ const config: Config = {
       "line-field": "var(--line-field)",
       "line-container": "var(--line-container)",
     },
+    borderRadius: {
+      "br-20": "20px",
+    },
   },
   plugins: [],
 };

@@ -29,6 +29,16 @@
     --line-dotted2: #95ACAA;
     --line-field: #DCE3E3;
     --line-container: #EDF1F1;
+    --gray-50: #EDF1F1;
+    --gray-100: #DCE3E3;
+    --gray-200: #B9C7C6;
+    --gray-300: #95ACAA;
+    --gray-400: #72908D;
+    --gray-500: #4F7471;
+    --gray-600: var(--text-gray3);
+    --gray-700: #2F4644;
+    --gray-800: #202E2D;
+    --gray-900: #101717;
   }
 }
 
