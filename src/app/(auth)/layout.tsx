@@ -5,8 +5,15 @@ import Logo from "@/assets/logo.svg";
 const AuthLayout = ({ children }: PropsWithChildren) => {
   return (
     <div className={"px-12"}>
-      <div className={"bg-text-gray1 h-14 mt-4 flex flex-row items-center"}>
+      <div className={"h-14 mt-4 flex flex-row items-center justify-between"}>
         <Image src={Logo} alt={""} />
+        <a
+          className={
+            "h-10 p-4 text-body-large font-semibold flex flex-col justify-center"
+          }
+        >
+          Login
+        </a>
       </div>
       {children}
     </div>
