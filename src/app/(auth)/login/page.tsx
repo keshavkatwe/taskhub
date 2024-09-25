@@ -16,6 +16,12 @@ const LoginPage = () => {
           <Input placeholder={"Email address"} />
           <Button>Sign Up with Email</Button>
         </div>
+        <hr className={"border-line-dotted2 border-dotted"} />
+        <div>
+          <p className={"text-body-large text-text-gray2 text-center"}>
+            Already have an account? <a>Login</a>
+          </p>
+        </div>
       </div>
     </OnboardingContainer>
   );
