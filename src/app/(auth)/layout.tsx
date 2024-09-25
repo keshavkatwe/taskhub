@@ -9,7 +9,7 @@ const AuthLayout = ({ children }: PropsWithChildren) => {
         <Image src={Logo} alt={""} />
         <a
           className={
-            "h-10 p-4 text-body-large font-semibold flex flex-col justify-center"
+            "h-10 p-4 text-body-large font-semibold flex flex-col justify-center text-text-black"
           }
         >
           Login

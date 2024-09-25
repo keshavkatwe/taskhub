@@ -53,6 +53,7 @@ const config: Config = {
     borderRadius: {
       "br-20": "20px",
       "br-16": "16px",
+      "br-8": "8px",
     },
   },
   plugins: [],
