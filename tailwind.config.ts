@@ -25,6 +25,19 @@ const config: Config = {
       "body-medium":"14px",
       "body-small":"12px",
       "body-x-small":"10px"
+    },
+    colors: {
+      'background-white':"#FFFFFF",
+      'background-grey':"#F4F6F6",
+      'text-black':"#000000",
+      'text-gray1':"#3F5D5A",
+      'text-gray2':"#4F7471",
+      'text-gray3':"#72908D",
+      'text-white':"#FFFFFF",
+      'line-dotted1':"#B9C7C6",
+      'line-dotted2':"#95ACAA",
+      'line-field':"#DCE3E3",
+      'line-container':"#EDF1F1",
     }
   },
   plugins: [],
