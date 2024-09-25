@@ -25,6 +25,7 @@
   --gray-800: #202E2D;
   --gray-900: #101717;
   --blue-500: #0037FF;
+  --blue-600: #002CCC;
 }
 
 @media (prefers-color-scheme: dark) {

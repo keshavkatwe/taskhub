@@ -1,4 +1,4 @@
-import { Input, OnboardingContainer } from "@/components";
+import { Button, Input, OnboardingContainer } from "@/components";
 
 const LoginPage = () => {
   return (
@@ -12,9 +12,9 @@ const LoginPage = () => {
           </p>
         </div>
         <hr className={"border-line-dotted2 border-dotted"} />
-        <div>
+        <div className={"flex flex-col gap-4"}>
           <Input placeholder={"Email address"} />
-          <h1>Hello</h1>
+          <Button>Sign Up with Email</Button>
         </div>
       </div>
     </OnboardingContainer>
