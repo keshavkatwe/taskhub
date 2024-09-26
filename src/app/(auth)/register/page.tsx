@@ -2,7 +2,7 @@ import { Button, Input, OnboardingContainer } from "@/components";
 import { useMemo } from "react";
 import Link from "next/link";
 
-const LoginPage = () => {
+const RegisterPage = () => {
   const footer = useMemo(() => {
     return (
       <div className={"pt-4 pb-5"}>
@@ -17,27 +17,25 @@ const LoginPage = () => {
     <OnboardingContainer footer={footer}>
       <div className={"flex flex-col gap-7"}>
         <div className={"flex flex-col gap-4"}>
-          <h4 className={"text-display3 font-semibold text-center"}>
-            Welcome back!
-          </h4>
+          <h4 className={"text-display3 font-semibold text-center"}>Sign Up</h4>
+          <p className={"text-body-large text-gray-500 text-center"}>
+            By signing up, I agree to the taskhub <a>Privacy Policy</a> and{" "}
+            <a>Terms of Service</a>
+          </p>
         </div>
         <hr className={"border-line-dotted2 border-dotted"} />
         <div className={"flex flex-col gap-4"}>
-          <Input placeholder={"Enter email address"} />
-          <Input placeholder={"Enter password"} />
-          <a className={"text-body-large font-semibold text-center"}>
-            Forgot Password?
-          </a>
-          <Button>Login</Button>
+          <Input placeholder={"Email address"} />
+          <Button>Sign Up with Email</Button>
         </div>
         <hr className={"border-line-dotted2 border-dotted"} />
         <div>
           <p className={"text-body-large text-text-gray2 text-center"}>
-            Don’t have an account? <Link href={"/register"}>Sign Up</Link>
+            Already have an account? <Link href={"/login"}>Login</Link>
           </p>
         </div>
       </div>
     </OnboardingContainer>
   );
 };
-export default LoginPage;
+export default RegisterPage;
