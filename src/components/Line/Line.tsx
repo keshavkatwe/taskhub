@@ -1,4 +1,4 @@
 const Line = () => {
-  return <hr className={"border-line-dotted2 border-dashed"} />;
+  return <hr className={"border-gray-300 border-dashed"} />;
 };
 export default Line;
