@@ -1,8 +1,19 @@
 import { Button, Input, OnboardingContainer } from "@/components";
+import { useMemo } from "react";
 
 const LoginPage = () => {
+  const footer = useMemo(() => {
+    return (
+      <div className={"pt-4 pb-5"}>
+        <p className={"text-body-large text-text-gray1 text-center"}>
+          Question? Need a hand? <a>Support Can Help</a>
+        </p>
+      </div>
+    );
+  }, []);
+
   return (
-    <OnboardingContainer>
+    <OnboardingContainer footer={footer}>
       <div className={"flex flex-col gap-7"}>
         <div className={"flex flex-col gap-4"}>
           <h4 className={"text-display3 font-semibold text-center"}>Sign Up</h4>
