@@ -1,4 +1,4 @@
-import { Button, Input, OnboardingContainer } from "@/components";
+import { Button, Input, Line, OnboardingContainer } from "@/components";
 import { useMemo } from "react";
 import Link from "next/link";
 
@@ -21,7 +21,7 @@ const LoginPage = () => {
             Welcome back!
           </h4>
         </div>
-        <hr className={"border-line-dotted2 border-dotted"} />
+        <Line />
         <div className={"flex flex-col gap-4"}>
           <Input placeholder={"Enter email address"} />
           <Input placeholder={"Enter password"} />
@@ -30,7 +30,7 @@ const LoginPage = () => {
           </a>
           <Button>Login</Button>
         </div>
-        <hr className={"border-line-dotted2 border-dotted"} />
+        <Line />
         <div>
           <p className={"text-body-large text-text-gray2 text-center"}>
             Don’t have an account? <Link href={"/register"}>Sign Up</Link>
