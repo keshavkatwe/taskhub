@@ -5,8 +5,10 @@ import Logo from "@/assets/logo.svg";
 const DashboardLayout = ({ children }: PropsWithChildren) => {
   return (
     <div className={"flex h-screen"}>
-      <div className={"w-72"}>
-        <Image src={Logo} alt={""} />
+      <div className={"w-72 p-4"}>
+        <div>
+          <Image src={Logo} alt={""} />
+        </div>
       </div>
       <div className={"flex-grow p-2"}>
         <div
