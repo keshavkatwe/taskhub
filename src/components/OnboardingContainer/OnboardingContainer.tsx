@@ -9,7 +9,7 @@ const OnboardingContainer = ({
   return (
     <div className={"mt-12 flex justify-center"}>
       <div className={"w-[495px] rounded-br-20 bg-gray-50 p-1"}>
-        <div className={"bg-background-white rounded-br-16 p-6"}>
+        <div className={"bg-background-white rounded-br-16 p-6 drop-shadow-xs"}>
           {children}
         </div>
         {footer}
