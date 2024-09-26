@@ -10,6 +10,7 @@ import {
   ChatDots,
   ChartBarHorizontal,
 } from "@phosphor-icons/react/dist/ssr";
+import { PlusCircle } from "@phosphor-icons/react/dist/ssr";
 
 const DashboardLayout = ({ children }: PropsWithChildren) => {
   return (
@@ -35,6 +36,13 @@ const DashboardLayout = ({ children }: PropsWithChildren) => {
             <SideNavItem icon={Bell} label={"Inbox"} />
             <SideNavItem icon={ChatDots} label={"Message"} />
             <SideNavItem icon={ChartBarHorizontal} label={"Analytics"} />
+          </div>
+          <Line />
+          <div className={"flex items-center justify-between"}>
+            <p className={"text-body-small font-medium text-gray-500"}>
+              PROJECTS
+            </p>
+            <PlusCircle className={"h-5 w-5 text-gray-500"} weight={"fill"} />
           </div>
         </div>
       </div>
