@@ -56,13 +56,15 @@ const config: Config = {
       "br-16": "16px",
       "br-8": "8px",
     },
-    dropShadow: {
-      xs: "0px 1px 2px rgba(24, 35, 34, 0.05)",
-      "primary-button": [
-        "0px 0px 0px 1px #0025AD",
-        "0px 4px 12px -2px rgba(0, 27, 126, 0.72)",
-        "0px 0px 0px 4px #D3DCFF",
-      ],
+    extend: {
+      dropShadow: {
+        xs: "0px 1px 2px rgba(24, 35, 34, 0.05)",
+        "primary-button": [
+          "0px 0px 0px 1px #0025AD",
+          "0px 4px 12px -2px rgba(0, 27, 126, 0.72)",
+          "0px 0px 0px 4px #D3DCFF",
+        ],
+      },
     },
   },
   plugins: [],

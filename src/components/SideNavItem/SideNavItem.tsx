@@ -14,7 +14,7 @@ const SideNavItem = ({ icon, label, isActive }: ISideNavItemProps) => {
       className={classNames(
         "flex gap-2.5 px-2.5 items-center h-10 rounded-br-8",
         {
-          "bg-background-white border border-gray-50": isActive,
+          "bg-background-white border border-gray-50 drop-shadow-sm": isActive,
         },
       )}
     >

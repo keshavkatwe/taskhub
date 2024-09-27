@@ -15,7 +15,7 @@ import { PlusCircle } from "@phosphor-icons/react/dist/ssr";
 const DashboardLayout = ({ children }: PropsWithChildren) => {
   return (
     <div className={"flex h-screen"}>
-      <div className={"w-72 p-4"}>
+      <div className={"w-72 p-4 pr-2"}>
         <div className={"flex flex-col gap-4"}>
           <Image src={Logo} alt={""} />
           <Line />
