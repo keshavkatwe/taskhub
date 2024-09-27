@@ -13,9 +13,9 @@ const SideNavItem = ({ icon, label, isActive, href }: ISideNavItemProps) => {
     <Link
       href={href}
       className={classNames(
-        "flex gap-2.5 px-2.5 items-center h-10 rounded-br-8",
+        "flex gap-2.5 px-2.5 items-center h-10 rounded-br-8 border border-background-grey",
         {
-          "bg-background-white border border-gray-50 drop-shadow-sm": isActive,
+          "bg-background-white border-gray-50 drop-shadow-sm": isActive,
         },
       )}
     >
