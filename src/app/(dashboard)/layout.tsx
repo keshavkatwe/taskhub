@@ -1,16 +1,10 @@
 import { PropsWithChildren } from "react";
 import Image from "next/image";
 import Logo from "@/assets/logo.svg";
-import { Line, SideNavItem } from "@/components";
-import {
-  CaretUpDown,
-  House,
-  CheckCircle,
-  Bell,
-  ChatDots,
-  ChartBarHorizontal,
-} from "@phosphor-icons/react/dist/ssr";
+import { Line } from "@/components";
+import { CaretUpDown } from "@phosphor-icons/react/dist/ssr";
 import { PlusCircle } from "@phosphor-icons/react/dist/ssr";
+import NavLinks from "@/app/(dashboard)/NavLinks";
 
 const DashboardLayout = ({ children }: PropsWithChildren) => {
   return (
@@ -30,13 +24,7 @@ const DashboardLayout = ({ children }: PropsWithChildren) => {
             <CaretUpDown className="w-5 h-5 text-gray-500" />
           </div>
           <Line />
-          <div className={"flex flex-col gap-0.5"}>
-            <SideNavItem icon={House} label={"Home"} isActive />
-            <SideNavItem icon={CheckCircle} label={"My Tasks"} />
-            <SideNavItem icon={Bell} label={"Inbox"} />
-            <SideNavItem icon={ChatDots} label={"Message"} />
-            <SideNavItem icon={ChartBarHorizontal} label={"Analytics"} />
-          </div>
+          <NavLinks />
           <Line />
           <div className={"flex items-center justify-between"}>
             <p className={"text-body-small font-medium text-gray-500"}>

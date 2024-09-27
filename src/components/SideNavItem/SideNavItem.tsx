@@ -5,12 +5,13 @@ interface ISideNavItemProps {
   icon: Icon;
   label: string;
   isActive?: boolean;
+  href: string;
 }
-const SideNavItem = ({ icon, label, isActive }: ISideNavItemProps) => {
+const SideNavItem = ({ icon, label, isActive, href }: ISideNavItemProps) => {
   const IconComponent = icon;
   return (
     <Link
-      href={""}
+      href={href}
       className={classNames(
         "flex gap-2.5 px-2.5 items-center h-10 rounded-br-8",
         {
