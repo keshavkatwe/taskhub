@@ -49,10 +49,18 @@ const DashboardLayout = ({ children }: PropsWithChildren) => {
       <div className={"flex-grow p-2"}>
         <div
           className={
-            "rounded-br-16 bg-background-white h-full border border-gray-50"
+            "rounded-br-16 bg-background-white h-full border border-gray-50 p-6 flex flex-col gap-8"
           }
         >
-          {children}
+          <div>
+            <div className={"flex flex-col gap-1.5"}>
+              <p className={"text-display5 font-semibold"}>My Tasks</p>
+              <p className={"text-body-large text-gray-500"}>
+                Monitor all of your tasks here
+              </p>
+            </div>
+          </div>
+          <div>{children}</div>
         </div>
       </div>
     </div>

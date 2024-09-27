@@ -12,7 +12,12 @@ const config: Config = {
       display2: "40px",
       display3: "32px",
       display4: "26px",
-      display5: "22px",
+      display5: [
+        "22px",
+        {
+          lineHeight: "24px",
+        },
+      ],
       display6: "18px",
       display7: "16px",
       h1: "48px",
@@ -21,7 +26,12 @@ const config: Config = {
       h4: "24px",
       h5: "20px",
       h6: "18px",
-      "body-large": "16px",
+      "body-large": [
+        "16px",
+        {
+          lineHeight: "22px",
+        },
+      ],
       "body-medium": "14px",
       "body-small": "12px",
       "body-x-small": "10px",
