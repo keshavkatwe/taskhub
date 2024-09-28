@@ -5,6 +5,7 @@ import { Line } from "@/components";
 import { CaretUpDown } from "@phosphor-icons/react/dist/ssr";
 import { PlusCircle } from "@phosphor-icons/react/dist/ssr";
 import NavLinks from "@/app/(dashboard)/NavLinks";
+import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nextjs";
 
 const DashboardLayout = ({ children }: PropsWithChildren) => {
   return (
@@ -48,7 +49,12 @@ const DashboardLayout = ({ children }: PropsWithChildren) => {
               </p>
             </div>
           </div>
-          <div>{children}</div>
+          <div>
+            <SignedIn>{children}</SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </div>
         </div>
       </div>
     </div>
