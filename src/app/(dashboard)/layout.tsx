@@ -6,8 +6,10 @@ import { CaretUpDown } from "@phosphor-icons/react/dist/ssr";
 import { PlusCircle } from "@phosphor-icons/react/dist/ssr";
 import NavLinks from "@/app/(dashboard)/NavLinks";
 import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 
-const DashboardLayout = ({ children }: PropsWithChildren) => {
+const DashboardLayout = async ({ children }: PropsWithChildren) => {
+  const user = await currentUser();
   return (
     <div className={"flex h-screen"}>
       <div className={"w-72 p-4 pr-2"}>
@@ -41,12 +43,23 @@ const DashboardLayout = ({ children }: PropsWithChildren) => {
             "rounded-br-16 bg-background-white h-full border border-gray-50 p-6 flex flex-col gap-8"
           }
         >
-          <div>
+          <div className={"flex justify-between"}>
             <div className={"flex flex-col gap-1.5"}>
               <p className={"text-display5 font-semibold"}>My Tasks</p>
               <p className={"text-body-large text-gray-500"}>
                 Monitor all of your tasks here
               </p>
+            </div>
+            <div>
+              {user?.imageUrl && (
+                <Image
+                  height={40}
+                  width={40}
+                  src={user?.imageUrl}
+                  alt={""}
+                  className={"rounded-full"}
+                />
+              )}
             </div>
           </div>
           <div>

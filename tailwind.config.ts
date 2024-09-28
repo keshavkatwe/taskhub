@@ -61,11 +61,6 @@ const config: Config = {
       "blue-500": "var(--blue-500)",
       "blue-600": "var(--blue-600)",
     },
-    borderRadius: {
-      "br-20": "20px",
-      "br-16": "16px",
-      "br-8": "8px",
-    },
     extend: {
       dropShadow: {
         xs: "0px 1px 2px rgba(24, 35, 34, 0.05)",
@@ -74,6 +69,11 @@ const config: Config = {
           "0px 4px 12px -2px rgba(0, 27, 126, 0.72)",
           "0px 0px 0px 4px #D3DCFF",
         ],
+      },
+      borderRadius: {
+        "br-20": "20px",
+        "br-16": "16px",
+        "br-8": "8px",
       },
     },
   },
