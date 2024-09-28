@@ -5,11 +5,19 @@ import { Line } from "@/components";
 import { CaretUpDown } from "@phosphor-icons/react/dist/ssr";
 import { PlusCircle } from "@phosphor-icons/react/dist/ssr";
 import NavLinks from "@/app/(dashboard)/NavLinks";
-import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nextjs";
-import { currentUser } from "@clerk/nextjs/server";
+import {
+  RedirectToCreateOrganization,
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+} from "@clerk/nextjs";
+import { currentUser, auth } from "@clerk/nextjs/server";
 
 const DashboardLayout = async ({ children }: PropsWithChildren) => {
   const user = await currentUser();
+  const authDetails = await auth();
+
+  console.log(authDetails);
   return (
     <div className={"flex h-screen"}>
       <div className={"w-72 p-4 pr-2"}>
@@ -63,7 +71,10 @@ const DashboardLayout = async ({ children }: PropsWithChildren) => {
             </div>
           </div>
           <div>
-            <SignedIn>{children}</SignedIn>
+            <SignedIn>
+              {!authDetails.orgId && <RedirectToCreateOrganization />}
+              {children}
+            </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
             </SignedOut>
