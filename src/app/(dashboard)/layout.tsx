@@ -12,6 +12,7 @@ import {
   SignedOut,
 } from "@clerk/nextjs";
 import { currentUser, auth } from "@clerk/nextjs/server";
+import { AddProject } from "@/widgets";
 
 const DashboardLayout = async ({ children }: PropsWithChildren) => {
   const user = await currentUser();
@@ -41,6 +42,7 @@ const DashboardLayout = async ({ children }: PropsWithChildren) => {
             <p className={"text-body-small font-medium text-gray-500"}>
               PROJECTS
             </p>
+            <AddProject />
             <PlusCircle className={"h-5 w-5 text-gray-500"} weight={"fill"} />
           </div>
         </div>
