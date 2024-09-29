@@ -43,7 +43,6 @@ const DashboardLayout = async ({ children }: PropsWithChildren) => {
               PROJECTS
             </p>
             <AddProject />
-            <PlusCircle className={"h-5 w-5 text-gray-500"} weight={"fill"} />
           </div>
         </div>
       </div>

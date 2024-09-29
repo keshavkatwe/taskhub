@@ -9,14 +9,16 @@ import {
   Label,
 } from "@headlessui/react";
 import { Button, Input, Line } from "@/components";
-import clsx from "clsx";
+import { PlusCircle } from "@phosphor-icons/react/dist/ssr";
 
 const AddProject = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <button onClick={() => setIsOpen(true)}>Open dialog</button>
+      <button onClick={() => setIsOpen(true)}>
+        <PlusCircle className={"h-5 w-5 text-gray-500"} weight={"fill"} />
+      </button>
       <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
@@ -38,7 +40,7 @@ const AddProject = () => {
               <Input placeholder={"Enter project name"} />
             </Field>
             <Line />
-            <div className="flex">
+            <div className="flex justify-end">
               <Button>Create Project</Button>
             </div>
           </DialogPanel>
