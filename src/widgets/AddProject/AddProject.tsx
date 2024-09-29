@@ -1,13 +1,15 @@
 "use client";
 import { useState } from "react";
 import {
-  Button,
-  Description,
   Dialog,
   DialogBackdrop,
   DialogPanel,
   DialogTitle,
+  Field,
+  Label,
 } from "@headlessui/react";
+import { Button, Input, Line } from "@/components";
+import clsx from "clsx";
 
 const AddProject = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,18 +28,18 @@ const AddProject = () => {
         {/* Full-screen container to center the panel */}
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
           {/* The actual dialog panel  */}
-          <DialogPanel className="max-w-lg space-y-4 bg-background-white p-12">
-            <DialogTitle className="font-bold">Deactivate account</DialogTitle>
-            <Description>
-              This will permanently deactivate your account
-            </Description>
-            <p>
-              Are you sure you want to deactivate your account? All of your data
-              will be permanently removed.
-            </p>
-            <div className="flex gap-4">
-              <button onClick={() => setIsOpen(false)}>Cancel</button>
-              <button onClick={() => setIsOpen(false)}>Deactivate</button>
+          <DialogPanel className="w-[612px] bg-background-white p-6 rounded-br-16 space-y-5">
+            <DialogTitle className="text-display5 font-bold">
+              Create a New Project
+            </DialogTitle>
+            <Line />
+            <Field className={"space-y-0.5"}>
+              <Label className="text-body-large">Project Name</Label>
+              <Input placeholder={"Enter project name"} />
+            </Field>
+            <Line />
+            <div className="flex">
+              <Button>Create Project</Button>
             </div>
           </DialogPanel>
         </div>
