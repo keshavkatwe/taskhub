@@ -3,7 +3,6 @@ import Image from "next/image";
 import Logo from "@/assets/logo.svg";
 import { Line } from "@/components";
 import { CaretUpDown } from "@phosphor-icons/react/dist/ssr";
-import { PlusCircle } from "@phosphor-icons/react/dist/ssr";
 import NavLinks from "@/app/(dashboard)/NavLinks";
 import {
   RedirectToCreateOrganization,
@@ -18,7 +17,11 @@ const DashboardLayout = async ({ children }: PropsWithChildren) => {
   const user = await currentUser();
   const authDetails = await auth();
 
-  console.log(authDetails);
+  // const token = await authDetails.getToken({
+  //   template: "integration_firebase",
+  // });
+  //
+  // console.log(token);
   return (
     <div className={"flex h-screen"}>
       <div className={"w-72 p-4 pr-2"}>
